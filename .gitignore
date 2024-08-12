@@ -1,2 +1,8 @@
-.vs/
-.x64/
+﻿/.vs
+/Debug
+/LearnCpp/Debug
+/LearnCpp/x64/Debug
+/x64
+/x64/Debug
+/utility/Debug
+/utility/x64/Debug

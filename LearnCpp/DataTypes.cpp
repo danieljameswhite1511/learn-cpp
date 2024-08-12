@@ -4,9 +4,223 @@
 #include <vector>
 
 
+void main11()
+{
+	int age = 10;
+
+	switch(age)//works only with integer or enum
+	{
+	case 10://must add body to case if you want to initialize variables here
+		{
+		int i = age;
+		std::cout << i << "\n";
+
+		}
+	case 4: case 8: case 12:
+		std::cout << "go to next school\n";
+		break;
+
+	default:
+		std::cout << "stay\n";
+		break;
+
+	}
+
+
+	/*enum  Mood
+	{
+		happy = -1, angry, sad = 1000
+	};*/
+	enum class Mood
+	{
+		happy = -1, angry, sad = 1000
+	};
+
+	Mood mood = Mood::happy;
+	switch (mood)
+	{
+	case Mood::happy:
+		std::cout << "you are happy" << "\n";
+		break;
+
+	case Mood::angry:
+		std::cout << "you are angry" << "\n";
+		break;
+
+	case Mood::sad:
+		std::cout << "you are sad" << "\n";
+		break;
+	default:
+
+		std::cout << "you are hard to read\n";
+	}
+}
+
+//while loops
+void main10()
+{
+	int i = 10;
+
+	while (i < 5)//same as for(;condition;)
+	{
+		std::cout << i << "\n";
+		i++;
+	}
+
+	do//will always run atleast once; runs once without checking conditions
+	{
+
+
+		i++;
+		
+	} while (i < 10);
+}
+
+
+//for loop with arrays and vectors
+void main9()
+{
+
+	int array[]{ 1,2,3,4,5 };
+
+	for(int i = 0; i < sizeof(array)/sizeof(int); i++)
+	{
+		std::cout << array[i] << "\n";
+	}
+	std::cout << "#####################\n";
+	for(int item : array)
+	{
+		std::cout << item << "\n";
+	}
+	std::cout << "#####################\n";
+	std::vector<int> vectorArray{1,2,3,4,5}; 
+
+	for (int i = 0; i < vectorArray.size(); i++)
+	{
+		std::cout << array[i] << "\n";
+	}
+	std::cout << "#####################\n";
+	for (int item : vectorArray)
+	{
+		std::cout << item << "\n";
+	}
+	std::cout << "#####################\n";
+	for (std::vector<int>::iterator itr = vectorArray.begin(); itr != vectorArray.end(); itr++)
+	{
+		std::cout << *itr << "\n";
+	}
+
+}
+
+//for loop
+void main8()
+{
+	int accumulatedValue = 0;
+
+	for (int i = 0; i <= 100; i++)
+	{
+		accumulatedValue += i;
+	}
+
+	std::cout << accumulatedValue;
+
+	for (int i = 0; i <= 100; i++)
+	{
+		if(i >100)
+		{
+			//exits the for loop 
+			break;
+		}
+		accumulatedValue += i;
+	}
+
+	std::cout << accumulatedValue;
+
+	for (int i = 0; i <= 100; i++)
+	{
+		if (i > 100)
+		{
+			//skips this increment
+			continue;
+		}
+		accumulatedValue += i;
+	}
+
+	std::cout << accumulatedValue;
+
+
+
+
+}
+
+//flow control construct
+// if statement
+void main7()
+{
+	int age;
+	std::cout << "Please enter your age\n";
+	std::cin >> age;
+
+	if (age > 20)
+	{
+		std::cout << "You are old enough to play the game\n";
+	}//scope/code block
+	else
+	{
+		std::cout << "!old enough to play the game";
+	}
+	if(age == 10)
+	{
+		std::cout << "You are " << age << "\n";
+	}
+
+	if (age != 10)
+	{
+		std::cout << "You are not 10" << "\n";
+	}
+
+	if (!(age == 300))
+	{
+		std::cout << "You are not 300"  << "\n";
+	}
+}
+
+void main6(){
+
+	int age;
+	std::string firstName;
+	std::string surname;
+
+	std::cout << "Please enter your age:\n";
+	//cin uses the input stream buffer
+	std::cin >> age;
+	std::cin.clear();//clear error from the buffer 
+	std::cin.ignore(1000000, '\n');
+	std::cout << "you have been around the sun " << age << " times\n";
+	std::cout << "Enter your full name: \n";
+	//items held in the buffer are separated by spaces
+	std::cin >> firstName;
+	std::cin >> surname;
+	std::cout << firstName << " " << surname << "\n";
+
+
+	std::cin.clear();//clear error from the buffer 
+	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	//to get a string including the spaces use getLine
+	std::cout << "type a sentence\n";
+	std::string name;
+	std::getline(std::cin, name);
+	std::cout << "Hello " << name << "\n";
+
+
+
+
+	
+}
+
 //Arithmetic operators
 
-void main()
+void main5()
 {
 	int a = 10;
 	int b = 20;

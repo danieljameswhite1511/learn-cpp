@@ -1,5 +1,0 @@
-﻿  DataTypes.cpp
-C:\Users\danie\source\repos\LearnCpp\LearnCpp\DataTypes.cpp(9,6): warning C4326: return type of 'main' should be 'int' instead of 'void'
-C:\Users\danie\source\repos\LearnCpp\LearnCpp\DataTypes.cpp(18,8): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-C:\Users\danie\source\repos\LearnCpp\LearnCpp\DataTypes.cpp(122,20): warning C4305: 'initializing': truncation from 'double' to 'float'
-  LearnCpp.vcxproj -> C:\Users\danie\source\repos\LearnCpp\x64\Debug\LearnCpp.exe
